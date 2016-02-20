@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - career_trender</title>
-
+        <title>@ViewData["Title"] - Career Trender</title>
+        <base href="/">
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
             <link rel="stylesheet" href="~/css/site.css" />
@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">career_trender</a>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">Career Trender</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -41,7 +41,7 @@
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; 2016 - career_trender</p>
+                <p>&copy; 2016 - Career Trender</p>
             </footer>
         </div>
 
@@ -61,6 +61,12 @@
             </script>
             <script src="~/js/site.min.js" asp-append-version="true"></script>
         </environment>
+
+        <script src="~/lib/angular/angular.js"></script>
+        <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="~/app/app.module.js"></script>
+        <script src="~/app/app.config.js"></script>
+        <script src="~/app/home.controller.js"></script>
 
         @RenderSection("scripts", required: false)
     </body>
