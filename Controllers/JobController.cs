@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using career_trender.Models;
 using career_trender.Classes;
 using Microsoft.AspNet.Mvc;
@@ -20,13 +19,9 @@ namespace career_trender.Controllers
             GitJobSearch query = new GitJobSearch();
             GitJobQueryParameters parameters = new GitJobQueryParameters();
             
-            parameters.JobQuery = "java";
-            parameters.Location = "aberdeen%2C+md";
-            parameters.SearchRadius = "";
-            parameters.Country = "us";
-            parameters.UserIP = "1.2.3.4";
-            parameters.UserAgent = "Mozilla/%2F4.0%28Firefox%29";
-            parameters.Limit = "10";
+            parameters.Description = "software+developer";
+            parameters.Location = "";
+            parameters.FullTime = false;
             
             return query.GetSearchResults(parameters);
         }

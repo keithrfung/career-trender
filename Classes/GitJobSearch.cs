@@ -6,6 +6,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace career_trender.Classes
 {
@@ -19,6 +20,14 @@ namespace career_trender.Classes
         public List<GitJobSearchResult> GetSearchResults(GitJobQueryParameters parameters)
         {
             string url = "https://jobs.github.com/positions.json?description=python&location=sf&full_time=true";
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("https://jobs.github.com/positions.json?");
+            sb.Append(string.Format("description={0}", parameters.Description));
+            sb.Append(string.Format("&location={0}", parameters.Location));
+            sb.Append(string.Format("&full_time={0}", parameters.FullTime.ToString()));
+            
+            url = sb.ToString();
 
             var client = new HttpClient();
             
