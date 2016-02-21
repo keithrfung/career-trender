@@ -1,15 +1,39 @@
 <div class="cloudview">
     <div class="container">
-        <h1>Career Trender</h1>
-        <p>Ignore this page - just go to Jobs</p>
-        <label>What:
-            <input type="text" ng-model="query">
-        </label>
-        <label>Where:
-            <input type="text" ng-model="location">
-        </label>
+        <h1>Career Trender</h1>    
+        <div ng-controller="HomeController">
+            <form class="form-horizontal">
+                <label>What:
+                    <input type="text" placeholder="Job Title, Description, etc..." ng-model="query">
+                    <input type="button" value="Search" ng-click="Search()" />                        
+                </label>
+            </form>
+            <p>{{message}}</p>
+            
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">Job Results</div>
+                <table class=table>
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Title</th>
+                            <th>Snippet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="job in vm.jobs">
+                            <th scope="row">{{job.Id}}</th>
+                            <th scope="row">{{job.Title}}</th>             
+                            <th scope="row">{{job.Description}}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </div>   
+        
+             
     </div>
-</div>
-<div>
-    
 </div>

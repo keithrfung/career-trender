@@ -1,11 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using career_trender.Models;
-using System.IO;
-using System.Net;
 using System.Net.Http;
-using Newtonsoft.Json;
 using System.Text;
 
 namespace career_trender.Classes

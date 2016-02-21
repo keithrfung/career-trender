@@ -20,8 +20,8 @@
                 <th>Snippet</th>
             </tr>
         </thead>
-        <tbody ng-repeat="job in vm.jobs">
-            <tr>
+        <tbody>
+            <tr ng-repeat="job in vm.jobs">
                 <th scope="row">{{job.Id}}</th>
                 <th>{{job.Title}}</th>             
                 <th>Snippet: {{job.Description}}</th>

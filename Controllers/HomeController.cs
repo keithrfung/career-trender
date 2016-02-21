@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using career_trender.Classes;
+using career_trender.Models;
 using Microsoft.AspNet.Mvc;
 
 namespace career_trender.Controllers
@@ -37,6 +36,6 @@ namespace career_trender.Controllers
         public IActionResult Error()
         {
             return View();
-        }
+        }        
     }
 }

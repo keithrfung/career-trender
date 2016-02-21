@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using career_trender.Models;
@@ -14,12 +13,12 @@ namespace career_trender.Controllers
     {
         // GET: api/job
         [HttpGet]
-        public IEnumerable<GitJobSearchResult> Get()
-        {
+        public IEnumerable<GitJobSearchResult> Get(string keyword)
+        {            
             GitJobSearch query = new GitJobSearch();
             GitJobQueryParameters parameters = new GitJobQueryParameters();
-            
-            parameters.Description = "software+developer";
+                        
+            parameters.Description = keyword;
             parameters.Location = "";
             parameters.FullTime = false;
             
@@ -30,7 +29,7 @@ namespace career_trender.Controllers
         [HttpGet("{id}")]
         public GitJobSearchResult Get(int id)
         {
-            return Get().FirstOrDefault();
+            return Get(string.Empty).FirstOrDefault();
         }
 
         // POST api/values
