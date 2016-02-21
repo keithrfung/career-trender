@@ -26,46 +26,11 @@ namespace career_trender.Controllers
             parameters.Country = "us";
             parameters.UserIP = "1.2.3.4";
             parameters.UserAgent = "Mozilla/%2F4.0%28Firefox%29";
-            
+            parameters.Limit = "10";
             
             return query.GetSearchResults(parameters);
         }
         
-        private IEnumerable<JobResult> GetJunkData()
-        {
-            var results = new List<JobResult>();
-                        
-            results.Add(new JobResult 
-            {
-                JobKey = 1,
-                JobTitle = "Software Developer",
-                Company = "Atlus, LLC",
-                City = "Aberdeen",
-                State = "MD",
-                Country = "USA",
-                FormattedLocation = "Aberdeen, MD",
-                Source = "N/A",
-                Date = DateTime.Now,
-                Description = "Altus, LLC is searching for a full-time C++ software developer to support on-going programs at the U.S. Army Research Laboratory (ARL) at Aberdeen Proving Ground, Maryland. The software developer will engage with the team to provide support for modeling and simulation                tools and high performance computing (HPC) resources. Job Requirements: - Expertise with the C++ programming language - Work experience as a programmer/coder - U.S. citizenship - Capability to obtain security clearance - Demonstrated capability to work effectively                    in a dynamic team environment. Additional capabilities desired include experience with the Qt application development framework and strong statistical analysis experience, specifically in the R system for statistical computing, data analysis, and graphics. Salary is                  dependent on candidate strengths in terms of education, work experience, and demonstrated skills. Altus provides an attractive employee benefits package. Altus Engineering is a small business founded in 2003 to deliver engineering services to the U.S. Department of                   Defense. For additional information on Altus please see our web site: http://www.altus-engineering.com/."                
-            });
-            
-            results.Add(new JobResult 
-            {
-                JobKey = 2,
-                JobTitle = "Software Engineer",
-                Company = "Atlus, LLC",
-                City = "Aberdeen",
-                State = "MD",
-                Country = "USA",
-                FormattedLocation = "Aberdeen, MD",
-                Source = "N/A",
-                Date = DateTime.Now,
-                Description = "Altus, LLC is searching for a full-time C++ software developer to support on-going programs at the U.S. Army Research Laboratory (ARL) at Aberdeen Proving Ground, Maryland. The software developer will engage with the team to provide support for modeling and simulation                tools and high performance computing (HPC) resources. Job Requirements: - Expertise with the C++ programming language - Work experience as a programmer/coder - U.S. citizenship - Capability to obtain security clearance - Demonstrated capability to work effectively                    in a dynamic team environment. Additional capabilities desired include experience with the Qt application development framework and strong statistical analysis experience, specifically in the R system for statistical computing, data analysis, and graphics. Salary is                  dependent on candidate strengths in terms of education, work experience, and demonstrated skills. Altus provides an attractive employee benefits package. Altus Engineering is a small business founded in 2003 to deliver engineering services to the U.S. Department of                   Defense. For additional information on Altus please see our web site: http://www.altus-engineering.com/."                
-            });
-                        
-            return results; 
-        }
-
         // GET api/job/5
         [HttpGet("{id}")]
         public IndeedSearchResult Get(int id)

@@ -7,7 +7,7 @@ namespace career_trender.Models
 {
     public class IndeedSearchResult
     {
-         /// <summary>
+        /// <summary>
         /// The time the job listing was posted formatted
         /// for display.
         /// </summary>
