@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace career_trender.Models
 {
-    public class IndeedQueryParameters
+    public class GitJobQueryParameters
     {
          /// <summary>
         /// Searches Job Title.

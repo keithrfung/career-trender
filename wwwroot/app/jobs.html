@@ -17,16 +17,14 @@
             <tr>
                 <th>Key</th>
                 <th>Title</th>
-                <th>Location</th>
                 <th>Snippet</th>
             </tr>
         </thead>
         <tbody ng-repeat="job in vm.jobs">
             <tr>
-                <th scope="row">{{job.JobKey}}</th>
-                <th>{{job.JobTitle}}</th>
-                <th>{{job.FormattedLocationFull}}</th>                
-                <th>Snippet: {{job.Snippet}}</th>
+                <th scope="row">{{job.Id}}</th>
+                <th>{{job.Title}}</th>             
+                <th>Snippet: {{job.Description}}</th>
             </tr>
         </tbody>
     </table>

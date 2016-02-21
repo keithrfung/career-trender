@@ -15,10 +15,10 @@ namespace career_trender.Controllers
     {
         // GET: api/job
         [HttpGet]
-        public IEnumerable<IndeedSearchResult> Get()
+        public IEnumerable<GitJobSearchResult> Get()
         {
-            IndeedSearch query = new IndeedSearch();
-            IndeedQueryParameters parameters = new IndeedQueryParameters();
+            GitJobSearch query = new GitJobSearch();
+            GitJobQueryParameters parameters = new GitJobQueryParameters();
             
             parameters.JobQuery = "java";
             parameters.Location = "aberdeen%2C+md";
@@ -33,7 +33,7 @@ namespace career_trender.Controllers
         
         // GET api/job/5
         [HttpGet("{id}")]
-        public IndeedSearchResult Get(int id)
+        public GitJobSearchResult Get(int id)
         {
             return Get().FirstOrDefault();
         }
