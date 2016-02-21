@@ -1,0 +1,34 @@
+<div class="cloudview">
+    <div class="container">
+        <h1>Career Trender - Jobs</h1>
+        <!--<p>Test: {{query}} in {{location}}</p>
+        <label>What:
+            <input type="text" ng-model="query">
+        </label>
+        <label>Where:
+            <input type="text" ng-model="location">
+        </label>-->
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Job Results</div>
+    <table class=table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Snippet</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="job in vm.jobs">
+            <tr>
+                <th scope="row">{{job.JobKey}}</th>
+                <th>{{job.JobTitle}}</th>
+                <th>{{job.FormattedLocationFull}}</th>                
+                <th>Snippet: {{job.Snippet}}</th>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

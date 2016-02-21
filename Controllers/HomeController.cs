@@ -26,6 +26,13 @@ namespace career_trender.Controllers
 
             return View();
         }
+        
+         public IActionResult Jobs()
+        {
+            ViewData["Message"] = "Your jobs page.";
+
+            return View();
+        }
 
         public IActionResult Error()
         {

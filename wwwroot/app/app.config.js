@@ -8,13 +8,21 @@
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', 
-            { 
-                url: '/', 
-                templateUrl:'app/home.html', 
-                controller: 'HomeController',
-                controllerAs: 'vm'
-            }
-        )
+                { 
+                    url: '/', 
+                    templateUrl:'app/home.html', 
+                    controller: 'HomeController',
+                    controllerAs: 'vm'
+                }
+            )
+            .state('jobs', 
+                { 
+                    url: '/jobs', 
+                    templateUrl:'app/jobs.html', 
+                    controller: 'JobController',
+                    controllerAs: 'vm'
+                }
+            )
     }
     
 })();
